@@ -1,0 +1,33 @@
+# AI Judge — Legal RAG Assistant
+# Core UI
+streamlit>=1.35.0
+
+# LLM orchestration
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-google-genai>=1.0.0
+langchain-openai>=0.1.0
+
+# Vector store
+chromadb>=0.5.0
+
+# Embeddings (local, no API key required)
+sentence-transformers>=3.0.0
+
+# Reranker (local BGE)
+# sentence-transformers covers this — no extra package needed
+
+# PDF and document loading
+pypdf>=4.0.0
+python-docx>=1.1.0
+
+# BM25 hybrid search
+rank-bm25>=0.2.2
+
+# Observability (optional)
+langsmith>=0.1.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.66.0
+numpy>=1.26.0
