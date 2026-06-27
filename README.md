@@ -1,34 +1,34 @@
-# AI Judge — Legal RAG Assistant for Civil Court Analysis
+# AI Judge — Legal RAG Assistant for Court Decision Analysis
 
-> **Free, open-source tool that helps Russian citizens analyze first-instance civil court decisions for compliance with Supreme Court of Russia rulings and practice reviews.**
+> **Free, open-source tool that helps citizens analyze court decisions for compliance with higher court rulings, judicial doctrine, and binding legal guidance.**
 
----
+***
 
 ## The Problem
 
-Every year, thousands of Russian citizens lose appellate cases — not because they are wrong on the merits, but because they cannot afford a lawyer to verify whether the lower court correctly applied binding Supreme Court doctrine. Legal analysis that takes a professional attorney 2–3 hours is simply out of reach for most people.
+Every year, thousands of people lose appellate cases — not because they are wrong on the merits, but because they cannot afford a lawyer to verify whether the lower court correctly applied binding higher court doctrine. Professional legal analysis is simply out of reach for most people.
 
 **AI Judge bridges this gap.**
 
----
+***
 
 ## What It Does
 
 AI Judge is a Retrieval-Augmented Generation (RAG) assistant that:
 
-- **Analyzes civil court decisions** against Resolutions of the Plenum of the Supreme Court of the Russian Federation and Supreme Court practice reviews
-- **Finds violations** — identifies where the first-instance court deviated from binding Supreme Court guidance
-- **Supports appellate work** — accepts appellate complaint arguments and evaluates their legal strength against Supreme Court doctrine
+- **Analyzes court decisions** against a knowledge base of higher court rulings, practice reviews, and binding judicial doctrine
+- **Finds violations** — identifies where the first-instance court deviated from established legal guidance
+- **Supports appellate work** — accepts appellate complaint arguments and evaluates their legal strength against the knowledge base
 - **Maintains conversational context** — multi-turn chat allows the user to discuss a single case across multiple messages without losing memory
-- **Provides source citations** — every conclusion is linked to the specific Plenum resolution or practice review passage that supports it
+- **Provides source citations** — every conclusion is linked to the specific document and passage that supports it
 
----
+***
 
 ## Key Features
 
 | Feature | Description |
 |---|---|
-| 🔍 Hybrid search | BM25 + vector search over the knowledge base of Supreme Court acts |
+| 🔍 Hybrid search | BM25 + vector search over the legal knowledge base |
 | 🧠 BGE Reranker | Cross-encoder reranking for high-precision legal passage retrieval |
 | 📄 Parent Document Retriever | Retrieves full legal context, not just matching fragments |
 | 💬 Multi-turn chat | Persistent case context across the entire conversation |
@@ -36,7 +36,7 @@ AI Judge is a Retrieval-Augmented Generation (RAG) assistant that:
 | 🗄️ Knowledge base management | Admin panel for adding, rebuilding, and backing up the document index |
 | 🔑 Flexible LLM backend | Supports Gemini API and OpenRouter |
 
----
+***
 
 ## Tech Stack
 
@@ -48,28 +48,29 @@ AI Judge is a Retrieval-Augmented Generation (RAG) assistant that:
 - **LLM:** Gemini 1.5 Pro / OpenRouter (user-supplied API key)
 - **Observability:** LangSmith (optional)
 
----
+***
 
 ## Who This Is For
 
-- **Citizens** preparing an appeal against a first-instance civil court decision
+- **Citizens** preparing an appeal against a first-instance court decision
 - **Legal aid organizations** providing free assistance to low-income clients
-- **Researchers** studying compliance of Russian courts with Supreme Court doctrine
+- **Researchers** studying compliance of courts with higher court doctrine
 - **Journalists** investigating systemic judicial errors
+- **Law students** learning how to analyze judicial reasoning
 
----
+***
 
 ## Humanitarian Mission
 
 This project is built on three principles:
 
-1. **Judicial transparency** — making court decisions machine-readable and verifiable against binding law
+1. **Judicial transparency** — making court decisions machine-readable and verifiable against binding legal doctrine
 2. **Equal access to justice** — providing professional-grade legal analysis to anyone, regardless of income
 3. **Civic empowerment** — enabling citizens to independently identify violations of their rights before it is too late to appeal
 
-The tool is deliberately open-source and free. There is no monetization. The knowledge base is built from publicly available Supreme Court documents and is freely redistributable.
+The tool is deliberately open-source and free. There is no monetization. The knowledge base is built from publicly available legal documents and is freely redistributable.
 
----
+***
 
 ## Getting Started
 
@@ -82,7 +83,7 @@ The tool is deliberately open-source and free. There is no monetization. The kno
 ### Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ai-judge.git
+git clone https://github.com/youright57/ai-judge.git
 cd ai-judge
 pip install -r requirements.txt
 ```
@@ -93,9 +94,9 @@ pip install -r requirements.txt
 streamlit run ai_judge.py
 ```
 
-On first launch, go to the **Admin** tab to build the knowledge base from your Supreme Court documents.
+On first launch, go to the **Admin** tab to build the knowledge base from your legal documents.
 
----
+***
 
 ## Project Structure
 
@@ -103,39 +104,39 @@ On first launch, go to the **Admin** tab to build the knowledge base from your S
 ai-judge/
 ├── ai_judge.py          # Main application
 ├── requirements.txt     # Python dependencies
-├── source_docs/         # Place your Supreme Court PDF documents here (not included)
+├── source_docs/         # Place your legal documents here (not included)
 ├── rag_db/              # Auto-generated vector database (gitignored)
 └── README.md
 ```
 
----
+***
 
 ## Roadmap
 
 - [ ] Multi-user server deployment (FastAPI backend)
 - [ ] Public web version for citizens without technical setup
-- [ ] Automated ingestion of new Supreme Court rulings
+- [ ] Automated ingestion of new court rulings
 - [ ] Export of analysis report as PDF
-- [ ] Support for administrative cases (КАС РФ)
+- [ ] Support for multiple legal systems and jurisdictions
 
----
+***
 
 ## Contributing
 
 Contributions are welcome — especially:
-- Additional Supreme Court documents for the knowledge base
+- Legal document collections for the knowledge base
 - Translations of the UI into other languages
 - Improvements to retrieval quality
 
 Please open an issue before submitting a pull request.
 
----
+***
 
 ## License
 
 [MIT License](LICENSE) — free to use, modify, and distribute.
 
----
+***
 
 ## About the Developer
 
@@ -143,6 +144,6 @@ This project is built and maintained by a single independent developer with no i
 
 If you find this tool useful, please ⭐ star the repository — it helps others find it.
 
----
+***
 
 *Built for citizens. Powered by open source.*
